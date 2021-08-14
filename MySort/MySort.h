@@ -29,3 +29,6 @@ void myOptimizedBubulSort(int*, int);
 
 //4、希尔排序
 void myShellSort(int*, int);
+
+//4.1、使用knuth间隔序列的希尔排序
+void myKnuthShellSort(int*, int);
