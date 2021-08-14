@@ -22,8 +22,12 @@
     <ClInclude Include="MySort.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CheckOrder.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="MyBubbleSort.c" />
     <ClCompile Include="MyInsertSort.c" />
     <ClCompile Include="MySelectionSort.c" />
+    <ClCompile Include="MyShellSort.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
