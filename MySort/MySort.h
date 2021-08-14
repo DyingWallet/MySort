@@ -32,3 +32,9 @@ void myShellSort(int*, int);
 
 //4.1、使用knuth间隔序列的希尔排序
 void myKnuthShellSort(int*, int);
+
+//5.1、归并排序-递归版
+void myRecursionMergeSort(int*, int);
+
+//5.2归并排序-迭代版
+void myIterationMergeSort(int*, int);

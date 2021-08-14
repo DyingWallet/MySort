@@ -26,6 +26,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="MyBubbleSort.c" />
     <ClCompile Include="MyInsertSort.c" />
+    <ClCompile Include="MyMergeSort.c" />
     <ClCompile Include="MySelectionSort.c" />
     <ClCompile Include="MyShellSort.c" />
   </ItemGroup>

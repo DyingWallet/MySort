@@ -1,7 +1,7 @@
 #include"MySort.h"
 
 #define SORT_TIMES 50
-#define ARR_LENGTH 5000000
+#define ARR_LENGTH 1000000
 
 void checkAvgSortTime(int times) {
 	srand((unsigned)time(NULL)); //用当前系统时间设置种子
@@ -73,11 +73,11 @@ void mySort() {
 	//冒泡排序
 	//myBubbulSort(arr, ARR_LENGTH);
 	//优化后的冒泡排序
-	//myOptimizedBubulSort(arr, ARR_LENGTH);
+	myOptimizedBubulSort(arr, ARR_LENGTH);
 	//希尔排序
 	//myShellSort(arr, ARR_LENGTH);
 	//使用knuth间隔序列的希尔排序
-	myKnuthShellSort(arr, ARR_LENGTH);
+	//myKnuthShellSort(arr, ARR_LENGTH);
 
 	QueryPerformanceCounter(&num);
 	end = num.QuadPart;
@@ -95,9 +95,9 @@ void mySort() {
 
 int main(void) {
 
-	//mySort();
+	mySort();
 
-	checkAvgSortTime(SORT_TIMES);
+	//checkAvgSortTime(SORT_TIMES);
 	
 	return 0;
 }
