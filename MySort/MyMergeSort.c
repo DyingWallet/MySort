@@ -14,13 +14,12 @@ void myRecursionMergeSort(int* arr, int left, int right) {
 		myMerge(arr, left, mid, right);
 
 	}
-	return arr;
 }
 
 void myMerge(int* arr, int left, int mid, int right) {
 
 	//定义一个数组进行暂存
-	int* tmpArr = (int*)calloc(right - left, sizeof(int));
+	int* tmpArr = (int*)calloc(right - left + 1, sizeof(int));
 
 	//双指针依次遍历两个子数组
 	int i = left, j = mid + 1, k = 0;
@@ -34,6 +33,8 @@ void myMerge(int* arr, int left, int mid, int right) {
 	while (i <= mid) tmpArr[k++] = arr[i++];
 	while (j <= right) tmpArr[k++] = arr[j++];
 	while (right >= left) arr[right--] = tmpArr[--k];
+
+	free(tmpArr);
 }
 
 //5.2归并排序-迭代版

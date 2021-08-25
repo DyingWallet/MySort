@@ -1,9 +1,31 @@
 #include"MySort.h"
 
 #define SORT_TIMES 50
-#define ARR_LENGTH 10
+#define ARR_LENGTH 1000000
 
 static isPrint = true;
+
+void mySelectMethod(int* arr) {
+
+	//选择排序
+	//mySelectionSort(arr, ARR_LENGTH);
+	//插入排序
+	//myInsertSort(arr, ARR_LENGTH);
+	//优化后的插入排序
+	//myOptimizedInsertSort(arr, ARR_LENGTH);
+	//冒泡排序
+	//myBubbulSort(arr, ARR_LENGTH);
+	//优化后的冒泡排序
+	//myOptimizedBubulSort(arr, ARR_LENGTH);
+	//希尔排序
+	//myShellSort(arr, ARR_LENGTH);
+	//使用knuth间隔序列的希尔排序
+	//myKnuthShellSort(arr, ARR_LENGTH);
+	//递归法归并排序
+	//myRecursionMergeSort(arr, 0, ARR_LENGTH - 1);
+	//迭代法归并排序
+	//myIterationMergeSort(arr, ARR_LENGTH);
+}
 
 void checkAvgSortTime(int times) {
 	srand((unsigned)time(NULL)); //用当前系统时间设置种子
@@ -25,20 +47,7 @@ void checkAvgSortTime(int times) {
 		QueryPerformanceCounter(&num);
 		start = num.QuadPart;
 
-		//选择排序
-		//mySelectionSort(arr, ARR_LENGTH);
-		//插入排序
-		//myInsertSort(arr, ARR_LENGTH);
-		//优化后的插入排序
-		//myOptimizedInsertSort(arr, ARR_LENGTH);
-		//冒泡排序
-		//myBubbulSort(arr, ARR_LENGTH);
-		//优化后的冒泡排序
-		//myOptimizedBubulSort(arr, ARR_LENGTH);
-		//希尔排序
-		//myShellSort(arr, ARR_LENGTH);
-		//使用knuth间隔序列的希尔排序
-		myKnuthShellSort(arr, ARR_LENGTH);
+		mySelectMethod(arr);
 
 		QueryPerformanceCounter(&num);
 		end = num.QuadPart;
@@ -72,24 +81,7 @@ void mySort(bool isPrint) {
 	QueryPerformanceCounter(&num);
 	start = num.QuadPart;
 
-	//选择排序
-	//mySelectionSort(arr, ARR_LENGTH);
-	//插入排序
-	//myInsertSort(arr, ARR_LENGTH);
-	//优化后的插入排序
-	//myOptimizedInsertSort(arr, ARR_LENGTH);
-	//冒泡排序
-	//myBubbulSort(arr, ARR_LENGTH);
-	//优化后的冒泡排序
-	//myOptimizedBubulSort(arr, ARR_LENGTH);
-	//希尔排序
-	//myShellSort(arr, ARR_LENGTH);
-	//使用knuth间隔序列的希尔排序
-	//myKnuthShellSort(arr, ARR_LENGTH);
-	//递归法归并排序
-	//myRecursionMergeSort(arr, 0, ARR_LENGTH - 1);
-	//迭代法归并排序
-	myIterationMergeSort(arr, ARR_LENGTH);
+	mySelectMethod(arr);
 
 	QueryPerformanceCounter(&num);
 	end = num.QuadPart;
@@ -115,9 +107,9 @@ void mySort(bool isPrint) {
 
 int main(void) {
 
-	mySort(isPrint);
+	//mySort(isPrint);
 
-	//checkAvgSortTime(SORT_TIMES);
+	checkAvgSortTime(SORT_TIMES);
 	
 	return 0;
 }
