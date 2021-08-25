@@ -34,7 +34,9 @@ void myShellSort(int*, int);
 void myKnuthShellSort(int*, int);
 
 //5.1¡¢¹é²¢ÅÅÐò-µÝ¹é°æ
-void myRecursionMergeSort(int*, int);
+void myRecursionMergeSort(int*, int, int);
+
+void myMerge(int* arr, int left, int mid, int right);
 
 //5.2¹é²¢ÅÅÐò-µü´ú°æ
 void myIterationMergeSort(int*, int);
