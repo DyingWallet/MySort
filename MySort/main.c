@@ -1,30 +1,57 @@
 #include"MySort.h"
 
-#define SORT_TIMES 50
+#define SORT_TIMES 100
 #define ARR_LENGTH 1000000
 
-static isPrint = true;
+static isPrint = false;
+
+void checkAvgSortTime(int);
+
+void mySort(bool);
 
 void mySelectMethod(int* arr) {
 
 	//选择排序
 	//mySelectionSort(arr, ARR_LENGTH);
+
 	//插入排序
 	//myInsertSort(arr, ARR_LENGTH);
+
 	//优化后的插入排序
 	//myOptimizedInsertSort(arr, ARR_LENGTH);
+
 	//冒泡排序
 	//myBubbulSort(arr, ARR_LENGTH);
+
 	//优化后的冒泡排序
 	//myOptimizedBubulSort(arr, ARR_LENGTH);
+
 	//希尔排序
 	//myShellSort(arr, ARR_LENGTH);
+
 	//使用knuth间隔序列的希尔排序
 	//myKnuthShellSort(arr, ARR_LENGTH);
+
 	//递归法归并排序
 	//myRecursionMergeSort(arr, 0, ARR_LENGTH - 1);
+
 	//迭代法归并排序
 	//myIterationMergeSort(arr, ARR_LENGTH);
+
+	//快速排序-递归版
+	//myRecursionQuickSort(arr, 0, ARR_LENGTH - 1);
+
+	//快速排序-迭代版
+	myIterationQuickSort(arr, ARR_LENGTH);
+}
+
+int main(void) {
+
+	//mySort(isPrint);
+
+	checkAvgSortTime(SORT_TIMES);
+
+	return 0;
 }
 
 void checkAvgSortTime(int times) {
@@ -53,7 +80,11 @@ void checkAvgSortTime(int times) {
 		end = num.QuadPart;
 		single = (end - start) * 1000 / freq;
 		sum += single;
-		printf("Check %d Finished, Single Sort Time: %lld ms\n", i + 1, single);
+
+		printf("Arr:%d Sort Finished , Sort Time: %lld ms\n", i + 1,  single);
+		//char* isSorted = checkOrder(arr, ARR_LENGTH) ? "true" : "fales";
+
+		//printf("Sort %d Finished, Arr:%d isSorted:%s, Sort Time: %lld ms\n", i + 1, i + 1, isSorted, single);
 	}
 	printf("All Check Finished, Avg Sort Time: %lld ms", sum / times);
 }
@@ -103,13 +134,4 @@ void mySort(bool isPrint) {
 		printf("\n====================\n");
 	}
 	system("pause");
-}
-
-int main(void) {
-
-	//mySort(isPrint);
-
-	checkAvgSortTime(SORT_TIMES);
-	
-	return 0;
 }

@@ -13,7 +13,7 @@
 bool checkOrder(int* arr, int length);
 
 //1¡¢Ñ¡ÔñÅÅĞò
-void mySelectionSort(int*,int);
+void mySelectionSort(int*, int);
 
 //2.1¡¢²åÈëÅÅĞò
 void myInsertSort(int*, int);
@@ -36,7 +36,13 @@ void myKnuthShellSort(int*, int);
 //5.1¡¢¹é²¢ÅÅĞò-µİ¹é°æ
 void myRecursionMergeSort(int*, int, int);
 
-void myMerge(int* arr, int left, int mid, int right);
+void myMerge(int*, int, int, int);
 
 //5.2¹é²¢ÅÅĞò-µü´ú°æ
 void myIterationMergeSort(int*, int);
+
+//6.1¿ìËÙÅÅĞò-µİ¹é°æ
+void myRecursionQuickSort(int*, int, int);
+
+//6.2¿ìËÙÅÅĞò-µü´ú°æ
+void myIterationQuickSort(int*, int);
