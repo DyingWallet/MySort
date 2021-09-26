@@ -1,9 +1,9 @@
 #include"MySort.h"
 
 #define SORT_TIMES 100
-#define ARR_LENGTH 1000000
+#define ARR_LENGTH 10
 
-static isPrint = false;
+static isPrint = true;
 
 void checkAvgSortTime(int);
 
@@ -15,10 +15,7 @@ void mySelectMethod(int* arr) {
 	//mySelectionSort(arr, ARR_LENGTH);
 
 	//插入排序
-	//myInsertSort(arr, ARR_LENGTH);
-
-	//优化后的插入排序
-	//myOptimizedInsertSort(arr, ARR_LENGTH);
+	//myInsertionSort(arr, ARR_LENGTH);
 
 	//冒泡排序
 	//myBubbulSort(arr, ARR_LENGTH);
@@ -27,7 +24,7 @@ void mySelectMethod(int* arr) {
 	//myOptimizedBubulSort(arr, ARR_LENGTH);
 
 	//希尔排序
-	//myShellSort(arr, ARR_LENGTH);
+	myShellSort(arr, ARR_LENGTH);
 
 	//使用knuth间隔序列的希尔排序
 	//myKnuthShellSort(arr, ARR_LENGTH);
@@ -42,14 +39,14 @@ void mySelectMethod(int* arr) {
 	//myRecursionQuickSort(arr, 0, ARR_LENGTH - 1);
 
 	//快速排序-迭代版
-	myIterationQuickSort(arr, ARR_LENGTH);
+	//myIterationQuickSort(arr, ARR_LENGTH);
 }
 
 int main(void) {
 
-	//mySort(isPrint);
+	mySort(isPrint);
 
-	checkAvgSortTime(SORT_TIMES);
+	//checkAvgSortTime(SORT_TIMES);
 
 	return 0;
 }

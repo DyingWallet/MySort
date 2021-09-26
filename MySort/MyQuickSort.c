@@ -1,8 +1,9 @@
 #include"MySort.h"
 
-#define INS_LIMIT 128
+#define INS_LIMIT 50
+#define SHELL_LIMIT 64
 
-void insertSortInQuickSort(int* arr, int start, int end) {
+void insertionSortInQuickSort(int* arr, int start, int end) {
 	for (int i = start, j, temp; i <= end; i++) {
 		j = i;
 		temp = arr[j];
@@ -31,7 +32,7 @@ void shellSortInQuickSort(int* arr, int start, int end) {
 
 			while (j - gap >= start && temp < arr[j - gap]) {
 				arr[j] = arr[j - gap];
-				j = j - gap;
+				j -= gap;
 			}
 			arr[j] = temp;
 		}
@@ -84,12 +85,12 @@ void myRecursionQuickSort(int* arr, int left, int right) {
 
 		if ((i - 1) > left) {
 			if (i - 1 - left > INS_LIMIT) myRecursionQuickSort(arr, left, i - 1);
-			else insertSortInQuickSort(arr, left, i - 1);
+			else insertionSortInQuickSort(arr, left, i - 1);
 		}
 
 		if (right > (i + 1)) {
 			if (right - i - 1 > INS_LIMIT) myRecursionQuickSort(arr, i + 1, right);
-			else insertSortInQuickSort(arr, i + 1, right);
+			else insertionSortInQuickSort(arr, i + 1, right);
 		}
 	}
 	return;
@@ -123,14 +124,14 @@ void myIterationQuickSort(int* arr, int length) {
 
 		//右半区段先入栈
 		if (right > (i + 1)) {
-			if (right - (i + 1) > INS_LIMIT) {
+			if (right - (i + 1) > SHELL_LIMIT) {
 				stack[++top] = right;
 				stack[++top] = i + 1;
 			} else shellSortInQuickSort(arr, i + 1, right);
 		}
 		//左半区段后入栈
 		if ((i - 1) > left) {
-			if ((i - 1) - left > INS_LIMIT) {
+			if ((i - 1) - left > SHELL_LIMIT) {
 				stack[++top] = i - 1;
 				stack[++top] = left;
 			} else shellSortInQuickSort(arr, left, i - 1);

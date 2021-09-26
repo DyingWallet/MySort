@@ -15,11 +15,8 @@ bool checkOrder(int* arr, int length);
 //1°¢—°‘Ò≈≈–Ú
 void mySelectionSort(int*, int);
 
-//2.1°¢≤Â»Î≈≈–Ú
-void myInsertSort(int*, int);
-
-//2.2°¢≤Â»Î≈≈–Ú-”≈ªØ∞Ê
-void myOptimizedInsertSort(int*, int);
+//2°¢≤Â»Î≈≈–Ú
+void myInsertionSort(int*, int);
 
 //3.1°¢√∞≈›≈≈–Ú
 void myBubbulSort(int*, int);

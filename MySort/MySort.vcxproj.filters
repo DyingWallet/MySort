@@ -23,7 +23,7 @@
     <ClCompile Include="MySelectionSort.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MyInsertSort.c">
+    <ClCompile Include="MyInsertionSort.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MyBubbleSort.c">

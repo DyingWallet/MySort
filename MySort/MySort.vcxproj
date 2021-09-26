@@ -25,7 +25,7 @@
     <ClCompile Include="CheckOrder.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="MyBubbleSort.c" />
-    <ClCompile Include="MyInsertSort.c" />
+    <ClCompile Include="MyInsertionSort.c" />
     <ClCompile Include="MyMergeSort.c" />
     <ClCompile Include="MyQuickSort.c" />
     <ClCompile Include="MySelectionSort.c" />

@@ -1,14 +1,16 @@
 #include"MySort.h"
 
-void mySelectionSort(int* arr, int length) {
+//选择排序，每次选择最小/大的，并将其与当前无序区间的第一个元素交换。
 
-	for (int i = 0; i < length - 1; i++) {
-		int minIndex = i;
-		for (int j = i + 1; j < length; j++) {
-			if (arr[j] < arr[minIndex])	minIndex = j;
+void mySelectionSort(int* arr, int length) {
+	int min, tmp;
+	for (int i = 0, j; i < length - 1; i++) {
+		min = i;
+		for (j = i + 1; j < length; j++) {
+			if (arr[min] > arr[j]) min = j;
 		}
-		int temp = arr[minIndex];
-		arr[minIndex] = arr[i];
-		arr[i] = temp;
+		tmp = arr[i];
+		arr[i] = arr[min];
+		arr[min] = tmp;
 	}
 }
