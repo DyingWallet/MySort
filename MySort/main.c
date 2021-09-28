@@ -16,10 +16,10 @@ void mySelectMethod(int* arr) {
 	//mySelectionSort(arr, ARR_LENGTH);
 
 	//插入排序
-	myInsertionSort(arr, ARR_LENGTH);
+	//myInsertionSort(arr, ARR_LENGTH);
 
-	//2.2、使用二分查找法的插入排序
-	//myInsertionSortWithBinarySearch(arr, ARR_LENGTH);
+	//使用二分查找法的插入排序
+	myInsertionSortWithBinarySearch(arr, ARR_LENGTH);
 
 	//冒泡排序
 	//myBubbulSort(arr, ARR_LENGTH);
