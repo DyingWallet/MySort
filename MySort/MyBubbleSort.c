@@ -14,28 +14,34 @@
 
 //√∞≈›≈≈–Ú
 void myBubbulSort(int* arr, int length) {
-
+	bool isSwap;
 	for (int i = 0; i < length; i++) {
+		isSwap = false;
 		for (int j = 0; j < length -1; j++) {
 			if (arr[j+1] < arr[j]) {
 				int temp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = temp;
+				isSwap = true;
 			}
 		}
+		if (!isSwap) break;
 	}
 }
 
 //”≈ªØ∫Ûµƒ√∞≈›≈≈–Ú
 void myOptimizedBubulSort(int* arr, int length) {
-
+	bool isSwap;
 	for (int i = 0; i < length; i++) {
+		isSwap = false;
 		for (int j = 0; j < length - i - 1; j++) {
 			if (arr[j + 1] < arr[j]) {
 				int temp = arr[j + 1];
 				arr[j + 1] = arr[j];
 				arr[j] = temp;
+				isSwap = true;
 			}
 		}
+		if (!isSwap) break;
 	}
 }

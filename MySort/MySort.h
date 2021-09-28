@@ -15,8 +15,11 @@ bool checkOrder(int* arr, int length);
 //1、选择排序
 void mySelectionSort(int*, int);
 
-//2、插入排序
+//2.1、插入排序
 void myInsertionSort(int*, int);
+
+//2.2、使用二分查找法的插入排序
+void myInsertionSortWithBinarySearch(int* , int);
 
 //3.1、冒泡排序
 void myBubbulSort(int*, int);

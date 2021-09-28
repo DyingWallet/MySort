@@ -1,9 +1,10 @@
 #include"MySort.h"
 
 #define SORT_TIMES 100
-#define ARR_LENGTH 10
+#define ARR_LENGTH 10000
 
-static isPrint = true;
+static bool isPrint = true;
+static int mode = 2;
 
 void checkAvgSortTime(int);
 
@@ -15,7 +16,10 @@ void mySelectMethod(int* arr) {
 	//mySelectionSort(arr, ARR_LENGTH);
 
 	//插入排序
-	//myInsertionSort(arr, ARR_LENGTH);
+	myInsertionSort(arr, ARR_LENGTH);
+
+	//2.2、使用二分查找法的插入排序
+	//myInsertionSortWithBinarySearch(arr, ARR_LENGTH);
 
 	//冒泡排序
 	//myBubbulSort(arr, ARR_LENGTH);
@@ -24,7 +28,7 @@ void mySelectMethod(int* arr) {
 	//myOptimizedBubulSort(arr, ARR_LENGTH);
 
 	//希尔排序
-	myShellSort(arr, ARR_LENGTH);
+	//myShellSort(arr, ARR_LENGTH);
 
 	//使用knuth间隔序列的希尔排序
 	//myKnuthShellSort(arr, ARR_LENGTH);
@@ -44,10 +48,16 @@ void mySelectMethod(int* arr) {
 
 int main(void) {
 
-	mySort(isPrint);
-
-	//checkAvgSortTime(SORT_TIMES);
-
+	switch (mode) {
+	case 1:
+		mySort(isPrint); 
+		break;
+	case 2:
+		checkAvgSortTime(SORT_TIMES); 
+		break;
+	default:
+		break;
+	}
 	return 0;
 }
 
@@ -78,7 +88,9 @@ void checkAvgSortTime(int times) {
 		single = (end - start) * 1000 / freq;
 		sum += single;
 
-		printf("Arr:%d Sort Finished , Sort Time: %lld ms\n", i + 1,  single);
+		char* isSorted = checkOrder(arr, ARR_LENGTH) ? "true" : "fales";
+
+		printf("Arr:%d Sort Finished, is Sorted:%s, Sort Time: %lld ms\n", i + 1, isSorted,  single);
 		//char* isSorted = checkOrder(arr, ARR_LENGTH) ? "true" : "fales";
 
 		//printf("Sort %d Finished, Arr:%d isSorted:%s, Sort Time: %lld ms\n", i + 1, i + 1, isSorted, single);
