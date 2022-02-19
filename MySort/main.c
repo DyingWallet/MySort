@@ -1,10 +1,10 @@
 #include"MySort.h"
 
-#define SORT_TIMES 100
-#define ARR_LENGTH 10000
+#define SORT_TIMES 5
+#define ARR_LENGTH 10
 
 static bool isPrint = true;
-static int mode = 2;
+static int mode = 1;
 
 void checkAvgSortTime(int);
 
@@ -19,7 +19,7 @@ void mySelectMethod(int* arr) {
 	//myInsertionSort(arr, ARR_LENGTH);
 
 	//使用二分查找法的插入排序
-	myInsertionSortWithBinarySearch(arr, ARR_LENGTH);
+	//myInsertionSortWithBinarySearch(arr, ARR_LENGTH);
 
 	//冒泡排序
 	//myBubbulSort(arr, ARR_LENGTH);
@@ -39,10 +39,16 @@ void mySelectMethod(int* arr) {
 	//迭代法归并排序
 	//myIterationMergeSort(arr, ARR_LENGTH);
 
-	//快速排序-递归版
+	//基本快速排序-递归版-未经过任何优化的版本
+	//myBasicRecursionQuickSort(arr, 0, ARR_LENGTH - 1);
+
+	//基本快速排序-递归版-未经过任何优化的版本
+	myBasicIterationQuickSort(arr, ARR_LENGTH);
+
+	//快速排序-递归版-有bug，后期有空再进行修改
 	//myRecursionQuickSort(arr, 0, ARR_LENGTH - 1);
 
-	//快速排序-迭代版
+	//快速排序-迭代版-有bug，后期有空再进行修改
 	//myIterationQuickSort(arr, ARR_LENGTH);
 }
 

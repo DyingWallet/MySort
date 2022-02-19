@@ -41,6 +41,11 @@ void myMerge(int*, int, int, int);
 //5.2归并排序-迭代版
 void myIterationMergeSort(int*, int);
 
+//基本快速排序-未经过任何优化的版本
+void myBasicRecursionQuickSort(int*, int, int);
+
+void myBasicIterationQuickSort(int* , int );
+
 //6.1快速排序-递归版
 void myRecursionQuickSort(int*, int, int);
 

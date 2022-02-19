@@ -1,5 +1,6 @@
 #include"MySort.h"
 
+//Ï£¶ûÅÅÐò
 void myShellSort(int* arr, int length) {
 
 	for (int gap = floor(length / 2); gap > 0; gap = floor(gap / 2)) {
